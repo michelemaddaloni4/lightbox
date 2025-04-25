@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galleria Lightbox</title>
+
+  <!-- GLightbox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f8f8f8;
+      text-align: center;
+      padding: 40px;
+    }
+    .gallery a {
+      display: inline-block;
+      margin: 10px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .gallery a:hover {
+      transform: scale(1.05);
+    }
+    .gallery img {
+      width: 300px;
+      height: auto;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Galleria Lightbox Demo</h1>
+  <div class="gallery">
+    <a href="https://via.placeholder.com/1200x800" class="glightbox" data-gallery="gallery1">
+      <img src="https://via.placeholder.com/300x200" alt="Immagine 1">
+    </a>
+    <a href="https://via.placeholder.com/1200x800" class="glightbox" data-gallery="gallery1">
+      <img src="https://via.placeholder.com/300x200" alt="Immagine 2">
+    </a>
+    <a href="https://via.placeholder.com/1200x800" class="glightbox" data-gallery="gallery1">
+      <img src="https://via.placeholder.com/300x200" alt="Immagine 3">
+    </a>
+  </div>
+
+  <!-- GLightbox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script>
+    const lightbox = GLightbox({
+      selector: '.glightbox'
+    });
+  </script>
+</body>
+</html>
